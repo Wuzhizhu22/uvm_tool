@@ -13,8 +13,8 @@ from pkg_resources import resource_filename
 
 def main(name, has_separate_host_device_driver, vendor):
     # set sub name
-    agent_dir = "./" + name + "_agent"
-
+    # agent_dir = "./" + name + "_agent"
+    agent_dir = os.getcwd() + "\\" + name + "_agent"
     # yapf: disable
     # flake8: noqa
     # 4-tuple - path, ip name, class name, file ext
@@ -53,11 +53,14 @@ def main(name, has_separate_host_device_driver, vendor):
         fname = src_prefix + src + src_suffix
 
         # read template
-        tpl = Template(filename=resource_filename("gen", ftpl))
+        print(resource_filename("gen", ftpl))
 
+        tpl = Template(filename=resource_filename("gen", ftpl))
         if not os.path.exists(path_dir):
-            os.system("mkdir -p " + path_dir)
-            print("mkdir success ")
+            # os.system("mkdir -p " + path_dir)
+            mkcmd = "mkdir " + path_dir
+            print(mkcmd)
+            os.system(mkcmd)
         with open(path_dir + "/" + fname, "w") as fout:
             try:
                 fout.write(
@@ -72,4 +75,4 @@ def main(name, has_separate_host_device_driver, vendor):
 
 
 if __name__ == "__main__":
-    main("i2c", 0, 0)
+    main("test", 0, 0)
