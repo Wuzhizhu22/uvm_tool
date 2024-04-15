@@ -1,0 +1,105 @@
+VCS:uvmgen
+|-- myenv
+|   |-- doc
+|   |-- env
+|   |   |-- in_agt.sv
+|   |   |-- myenv_env.sv
+|   |   `-- out_agt.sv
+|   |-- examples
+|   |-- hdl
+|   |   `-- myenv_top.sv
+|   |-- include
+|   |   |-- mstr_slv_intfs.incl
+|   |   |-- mstr_slv_src.incl
+|   |   `-- myenv.sv
+|   |-- run
+|   |   `-- Makefile
+|   |-- src
+|   |   |-- in_agt_in_driver.sv
+|   |   |-- in_agt_in_intf.sv
+|   |   |-- in_agt_in_monitor.sv
+|   |   |-- in_agt_in_trans.sv
+|   |   |-- in_agt_mysqr.sv
+|   |   |-- in_agt_sequence_library.sv
+|   |   |-- mon_2cov.sv
+|   |   |-- myenv_cfg.sv
+|   |   |-- myenv_cov.sv
+|   |   |-- myscb.sv
+|   |   |-- out_agt_out_driver.sv
+|   |   |-- out_agt_out_intf.sv
+|   |   |-- out_agt_out_monitor.sv
+|   |   |-- out_agt_out_sqr.sv
+|   |   `-- out_agt_out_trans.sv
+|   `-- tests
+|       |-- myenv_tb_mod.sv
+|       `-- myenv_test.sv
+|-- README
+`-- uvmgen_options_log.txt
+
+
+my:
+D:.
+│  README.md
+│  
+├─interfaces
+│      ensm_intf.sv
+│      
+├─rtl
+│      ensm.sv
+│      ensm_old.sv
+│      ensm_v1
+│
+├─scripts
+│      dig_top.f
+│      filelist.f
+│
+├─sim
+│      makefile
+│      run.do
+│
+├─src
+│  ├─agents
+│  │  ├─in_agent
+│  │  │      ensm_in_agent.sv
+│  │  │      ensm_in_driver.sv
+│  │  │      ensm_in_monitor.sv
+│  │  │      ensm_in_trans.sv
+│  │  │      ensm_sequencer.sv
+│  │  │      in_pkg.sv
+│  │  │
+│  │  └─out_agent
+│  │          ensm_out_agent.sv
+│  │          ensm_out_monitor.sv
+│  │          ensm_out_trans.sv
+│  │          ensm_ref_mdl.sv
+│  │          ensm_scb.sv
+│  │          out_pkg.sv
+│  │
+│  ├─env
+│  │      ensm_env.sv
+│  │      env_pkg.sv
+│  │
+│  └─seq
+│          seq_fdd_indp.sv
+│          seq_flu2wait.sv
+│          seq_pkg.sv
+│          seq_sleep2alert.sv
+│          seq_wait2sleep.sv
+│
+├─tb
+│      top_tb.sv
+│
+└─tests
+        base_test.sv
+        tc_ensm_pin_lv_fdd_case.sv
+        tc_ensm_pin_lv_fdd_indp_case.sv
+        tc_ensm_pin_lv_tdd_rxtx_case.sv
+        tc_ensm_pin_pl_fdd_case.sv
+        tc_ensm_pin_pl_fdd_indp_case.sv
+        tc_ensm_pin_pl_tdd_rxtx_case.sv
+        tc_ensm_pin_pl_tdd_rx_case.sv
+        tc_ensm_pin_pl_tdd_tx_case.sv
+        tc_ensm_spi_fdd_case.sv
+        tc_ensm_spi_tdd_rxtx_case.sv
+        test_lib.sv
+        test_pkg.sv
