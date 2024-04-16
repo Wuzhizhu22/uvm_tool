@@ -2,6 +2,8 @@ import argparse
 import gen_intf
 import gen_env
 import gen_agt
+import gen_tt
+import gen_stc
 
 
 def main():
@@ -44,6 +46,16 @@ def main():
     )
 
     gen_agt.gen_out_agt(
+        args.name,
+        args.outdir,
+    )
+
+    gen_tt.gen_tt(
+        args.name,
+        args.outdir,
+    )
+
+    gen_stc.gen_stc(
         args.name,
         args.outdir,
     )

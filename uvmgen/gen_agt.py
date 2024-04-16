@@ -53,7 +53,7 @@ def gen_out_agt(name, root_dir):
         (name + "_", "out_trans", ".sv"),
         (name + "_", "ref_mdl", ".sv"),
         (name + "_", "scb", ".sv"),
-        (name + "_", "out_pkg", ".sv"),
+        ("", "out_pkg", ".sv"),
     ]
     for tup in agent_srcs:
         src_prefix = tup[0]
@@ -81,4 +81,4 @@ def gen_out_agt(name, root_dir):
                     )
                 )
             finally:
-                print(fname + "generate success!")
+                print(fname + " generate success!")

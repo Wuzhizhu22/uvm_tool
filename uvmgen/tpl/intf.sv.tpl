@@ -1,5 +1,7 @@
 `ifndef ${fname_prefix}__SV
 `define ${fname_prefix}__SV
+
+
 interface ${name}_intf #(
   // parameter
 ) (
